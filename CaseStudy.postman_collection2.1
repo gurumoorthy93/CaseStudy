@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "0a2a7f5e-dbc6-4a1e-bb1c-641658c2b004",
+		"name": "CaseStudy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19491688"
+	},
+	"item": [
+		{
+			"name": "UserLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"johndoe@gmail.com\",\r\n  \"password\": \"demo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7084/Users/Login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7084",
+					"path": [
+						"Users",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PlaceOrder",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"productID\": 1,\r\n    \"quantity\": 2\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7084/Orders",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7084",
+					"path": [
+						"Orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrderById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7084/Orders/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7084",
+					"path": [
+						"Orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrdersForAUserWithPagination",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7084/Orders/Search?PageNo=1&PageSize=10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7084",
+					"path": [
+						"Orders",
+						"Search"
+					],
+					"query": [
+						{
+							"key": "PageNo",
+							"value": "1"
+						},
+						{
+							"key": "PageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
