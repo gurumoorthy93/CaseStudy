@@ -1,0 +1,11 @@
+.vs/
+CaseStudy.API/bin/
+CaseStudy.API/obj/
+CaseStudy.Core/bin/
+CaseStudy.Core/obj/
+CaseStudy.DAL/bin/
+CaseStudy.DAL/obj/
+CaseStudy.Services/bin/
+CaseStudy.Services/obj/
+CaseStudy.Tests/bin/
+CaseStudy.Tests/obj/
